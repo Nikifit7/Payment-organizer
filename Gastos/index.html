@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tabela com soma de valores</title>
+	<style>
+        nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(5, 12, 54);
+  padding: 10px;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 10px;
+}
+
+.menu a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.menu a:hover {
+  background-color: #f8e10f
+}
+
+
+		.resultado {
+			color: red;
+		}
+        
+		body {
+			font-family: Arial, sans-serif;
+			background-image:url(cobg.jpg);
+            background-position: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+			color: #555;
+		}
+
+		table {
+			border: radius 50px;;
+			margin: 50px auto;
+			background-color: #fff;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+		}
+
+		th, td {
+			padding: 10px;
+			border: 1px solid #ccc;
+		}
+
+		th {
+			background-color: #f2f2f2;
+			color: #555;
+			font-weight: bold;
+		}
+
+		input[type="text"], input[type="number"] {
+			padding: 5px;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			font-size: 16px;
+			color: #555;
+			width: 100%;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+		}
+
+		button {
+			background-color: #21b6e4;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			font-size: 16px;
+			border-radius: 50px;
+			cursor: pointer;
+			transition: background-color 0.3s ease-in-out;
+		}
+
+		button:hover {
+			background-color: #e9dc2a;
+		}
+
+		.resultado {
+			color: red;
+			font-weight: bold;
+            font-size: larger;
+		}
+
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+            <nav>
+                <div class="logo">
+                  <a href="#"><img src="logo.jpg" alt="Logo"></a>
+                </div>
+                <div class="menu">
+                  <ul>
+                    <li><a href="#"> Payments </a></li>
+                    <li><a href="#">Other bills </a></li>
+                    <li><a href="#">Contact us  </a></li>
+                  </ul>
+                </div>
+              </nav>
+			<tr>
+				<th>Monthly payment of </th>
+				<th>Coast R$</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input type="text" id="nome1"></td>
+				<td><input type="number" id="valor1"></td>
+			</tr>
+			<tr>
+				<td><input type="text" id="nome2"></td>
+				<td><input type="number" id="valor2"></td>
+			</tr>
+			<tr>
+				<td><input type="text" id="nome3"></td>
+				<td><input type="number" id="valor3"></td>
+			</tr>
+			<tr>
+				<td><input type="text" id="nome4"></td>
+				<td><input type="number" id="valor4"></td>
+			</tr>
+			<tr>
+				<td><input type="text" id="nome5"></td>
+				<td><input type="number" id="valor5"></td>
+			</tr>
+            <tr>
+				<td><input type="text" id="nome5"></td>
+				<td><input type="number" id="valor5"></td>
+			</tr>
+            <tr>
+				<td><input type="text" id="nome5"></td>
+				<td><input type="number" id="valor5"></td>
+			</tr>
+            <tr>
+				<td><input type="text" id="nome5"></td>
+				<td><input type="number" id="valor5"></td>
+			</tr>
+
+
+
+			<tr>
+				<td colspan="2"><button onclick="somaValores()">Somar valores</button></td>
+			</tr>
+			<tr>
+				<td>Total:</td>
+				<td><span id="resultado"></span></td>
+			</tr>
+		</tbody>
+	</table>
+    <script>
+		function somaValores() {
+			let valor1 = parseFloat(document.getElementById('valor1').value) || 0;
+			let valor2 = parseFloat(document.getElementById('valor2').value) || 0;
+			let valor3 = parseFloat(document.getElementById('valor3').value) || 0;
+			let valor4 = parseFloat(document.getElementById('valor4').value) || 0;
+			let valor5 = parseFloat(document.getElementById('valor5').value) || 0;
+
+			let total = valor1 + valor2 + valor3 + valor4 + valor5;
+			document.getElementById('resultado').textContent = total.toFixed(2);
+		}
+	</script>
+	
+</body>
+</html>
